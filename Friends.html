@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Friends</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+<!-- CSS Libraries -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Custom CSS -->
+<style>
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1b0036, #000010);
+  font-family: "Montserrat", sans-serif;
+}
+
+img { margin-bottom: -7px; }
+.w3-row-padding img { margin-bottom: 12px; }
+
+/* Galaxy Header */
+.galaxy-header {
+  font-family: 'Orbitron', sans-serif;
+  color: #e0c3fc;
+  background: radial-gradient(circle at top, #2b1055, #000000);
+  padding: 40px 0;
+}
+
+.galaxy-header h1 {
+  letter-spacing: 4px;
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 15px #8a2be2,
+    0 0 30px #4b0082;
+}
+
+/* Galaxy Marquee */
+.galaxy-marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  box-shadow: 0 0 20px rgba(138,43,226,0.6);
+}
+
+.galaxy-marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  color: #e0c3fc;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #9f7aea,
+    0 0 20px #7f00ff;
+  animation: galaxyScroll 10s linear infinite;
+}
+
+@keyframes galaxyScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+</style>
+</head>
+
+<body>
+
+<div style="background-color:#B0C4DE; padding:32px;">
+
+<!-- FLOATING HOME BUTTON -->
+<a href="Index.html" style="
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  padding: 14px 22px;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #e0c3fc;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow:
+    0 0 10px rgba(159,122,234,0.8),
+    0 0 25px rgba(127,0,255,0.6);
+  transition: all 0.3s ease;
+">
+  🏠 HOME
+</a>
+
+
+<!-- Page Content -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+
+  <header class="w3-center w3-margin-bottom galaxy-header">
+    <h1><b>LIFE GALLERY</b></h1>
+    <p class="w3-padding-16">
+      <button class="w3-button w3-black w3-round-large" onclick="myFunction()">
+        Toggle Grid Padding
+      </button>
+    </p>
+  </header>
+</div>
+
+<!-- Galaxy Marquee -->
+<div class="galaxy-marquee">
+  <span>🌌 Built on laughs, trust, and late nights 🌠</span>
+</div>
+<br>
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src="UF1.jpg" style="width:100%">
+    <img src="UF2.jpg" style="width:100%">
+    <img src="UF3.jpg" style="width:100%">
+    <img src="UF4.jpg" style="width:100%">
+    <img src="UF5.jpg" style="width:100%">
+    <img src="UF6.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="UF7.jpg" style="width:100%">
+    <img src="UF8.jpg" style="width:100%">
+    <img src="UF9.jpg" style="width:100%">
+    <img src="UF10.jpg" style="width:100%">
+    <img src="UF11.jpg" style="width:100%">
+    <img src="UF12.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="UF13.jpg" style="width:100%">
+    <img src="F1.jpg" style="width:100%">
+    <img src="F3.jpg" style="width:100%">
+    <img src="F10.jpg" style="width:100%">
+    <img src="F11.jpg" style="width:100%">
+    <img src="F14.jpg" style="width:100%">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge">
+<audio controls style="width:320px; heigh:120px;" autoplay loop>
+              <source src="song.mp3" type="audio/mpeg">
+</footer>
+
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  x.className = x.className === "w3-row" ? "w3-row-padding" : "w3-row";
+}
+
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
