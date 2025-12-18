@@ -1,0 +1,39 @@
+/* External CSS for assignment requirement */
+/* This file exists to separate styling from HTML */
+
+/* Global text and background */
+body {
+  font-family: "Lato", sans-serif;
+  color: black;
+}
+
+/* Headings styling */
+h3 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+/* Gallery hover enhancement */
+.gallery-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Gallery captions */
+.gallery-caption {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 6px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+  h3 {
+    font-size: 20px;
+  }
+}
